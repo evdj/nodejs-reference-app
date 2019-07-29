@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  #formcontainer.todos_form
+    form(action='/todos', method='POST' )
+      p
+        label(for='note')
+          | Please enter your note.
+          input(type='text', name='note', value='')
+        br
+        input(type='submit', value='Submit')
+
